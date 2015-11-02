@@ -1,0 +1,5 @@
+# to find lines WITHOUT the word "eBook"
+^(?!.*ebook).*$
+
+# to find empty lines, especially in notepad++
+\n\r
