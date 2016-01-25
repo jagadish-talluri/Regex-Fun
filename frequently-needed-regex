@@ -1,8 +1,16 @@
 # to find lines WITHOUT the word "eBook"
-^(?!.*ebook).*$
+find:     ^(?!.*ebook).*$
 
 # to find empty lines
-^\s*$
+find:     ^\s*$
 
 # to find empty lines, especially in notepad++ (without regex)
-\n\r
+find:     \n\r
+
+# to remove trailing spaces without removing empty lines, don't put any thing in "replace box"
+find:     [ \t]+$
+replace:  
+
+# deleting duplicate lines from a file, duplicate lines may be any number, you will result in one(\1) occurance as output
+find:     ^(.*)(\r?\n\1)+$
+replace:  \1
